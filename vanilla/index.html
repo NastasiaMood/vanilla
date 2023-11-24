@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список Задач</title>
+  </head>
 
-<body>
-    <div class="wrap">
-        <input type="text" id="input">
-        <button id="but">add</button>
-        <ul id="result"></ul>
-        <div>
-            Total:
-            <span id="total"></span>
-        </div>
+  <body>
+    <div class="header">
+      <h2>Список Задач</h2>
     </div>
+
+<!--<div class="wrap">
+      <input type="text" id="input" />
+      <button id="but" type="submit">add</button>
+      <ul id="result"></ul>
+      <div>
+        Total:
+        <span id="total"></span>
+      </div>
+    </div> -->
+<form class="block-todo">
+  <input type="text" class="todo-input" id="todoInput"/>
+  <button class="todo-btn" type="submit" id="todoBtn"> добавить </button>
+  <div class="select">
+    <select name="todos" class="filter" id="Filter">
+      <option value="all"> все </option>
+      <option value="complet"> выполненые </option>
+      <option value="uncomplet"> невыполненые </option>      
+    </select>
+  </div>
+</form>
+<div class="todo-container">
+  <ul class="result" id="Result"></ul>
+</div>
+<div class="header">
+  <h2> Пользователи </h2>
+</div>
+<div class="users">
+  <button class="user-rand-btn" id="userRandBtn"> получить случайных пользователей</button>
+  <div class="user-container">
+    <ul class="user-rand-list" id="userRandList"></ul>
+  </div>
+</div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

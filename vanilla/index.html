@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <link href="style.css" rel="stylesheet" />
     <meta charset="UTF-8" />
@@ -8,42 +8,40 @@
   </head>
 
   <body>
-    <div class="header">
-      <h2>Список Задач</h2>
+    <div class="block-todo">
+      <div class="header">
+        <h2>Список Задач</h2>
+      </div>
+
+      <div class="content">
+        <form class="form">
+          <input type="text" class="todo-input" />
+          <button class="todo-button" type="submit" id="btn">добавить</button>
+          <div class="select">
+            <select name="todos" class="todo-filter">
+              <option value="all">все</option>
+              <option value="completed">выполненые</option>
+              <option value="uncompleted">невыполненые</option>
+            </select>
+          </div>
+        </form>
+        <div class="todo-content">
+          <ul class="todolist"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="block-users">
+      <div class="header">
+        <h2>Пользователи</h2>
+      </div>
+      <div class="content">
+        <button class="user-button">получить случайных пользователей</button>
+        <div class="user-content">
+          <ul class="userlist"></ul>
+        </div>
+      </div>
     </div>
 
-<!--<div class="wrap">
-      <input type="text" id="input" />
-      <button id="but" type="submit">add</button>
-      <ul id="result"></ul>
-      <div>
-        Total:
-        <span id="total"></span>
-      </div>
-    </div> -->
-<form class="block-todo">
-  <input type="text" class="todo-input" id="todoInput"/>
-  <button class="todo-btn" type="submit" id="todoBtn"> добавить </button>
-  <div class="select">
-    <select name="todos" class="filter" id="Filter">
-      <option value="all"> все </option>
-      <option value="complet"> выполненые </option>
-      <option value="uncomplet"> невыполненые </option>      
-    </select>
-  </div>
-</form>
-<div class="todo-container">
-  <ul class="result" id="Result"></ul>
-</div>
-<div class="header">
-  <h2> Пользователи </h2>
-</div>
-<div class="users">
-  <button class="user-rand-btn" id="userRandBtn"> получить случайных пользователей</button>
-  <div class="user-container">
-    <ul class="user-rand-list" id="userRandList"></ul>
-  </div>
-</div>
     <script src="app.js"></script>
   </body>
 </html>
